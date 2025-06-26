@@ -1,3 +1,5 @@
+"use client";
+
 import { SCard } from "stng-react";
 
-export default SCard;
+export { SCard };

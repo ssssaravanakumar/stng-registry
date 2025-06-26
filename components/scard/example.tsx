@@ -1,4 +1,4 @@
-import { SCard } from "stng-react";
+import { SCard } from "./component";
 
 export default function SCardExample() {
   return (

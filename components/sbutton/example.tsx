@@ -1,4 +1,4 @@
-import { SButton } from "stng-react";
+import { SButton } from "./component";
 
 export default function SButtonExample() {
   return (
@@ -37,22 +37,6 @@ export default function SButtonExample() {
           <SButton variant="primary">Normal</SButton>
           <SButton variant="primary" disabled>
             Disabled
-          </SButton>
-        </div>
-      </div>
-
-      {/* Button Types */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold">Button Types</h3>
-        <div className="flex flex-wrap gap-3">
-          <SButton type="button" variant="primary">
-            Button
-          </SButton>
-          <SButton type="submit" variant="success">
-            Submit
-          </SButton>
-          <SButton type="reset" variant="secondary">
-            Reset
           </SButton>
         </div>
       </div>

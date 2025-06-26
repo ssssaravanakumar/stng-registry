@@ -1,3 +1,5 @@
+"use client";
+
 import { SButton } from "stng-react";
 
-export default SButton;
+export { SButton };

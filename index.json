@@ -1,85 +1,22 @@
 {
-  "name": "stng-registry",
-  "version": "1.0.0",
-  "description": "Custom ShadCN Registry for STNG React Components",
-  "author": "ssssaravanakumar",
-  "homepage": "https://github.com/ssssaravanakumar/stng-registry",
-  "license": "MIT",
-  "registry": "https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/index.json",
-  "components": [
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/styles.css",
+    "baseColor": "slate",
+    "cssVariables": true
+  },
+  "registry": [
     {
-      "name": "sbutton",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["stng-react"],
-      "devDependencies": ["@types/react", "@types/react-dom"],
-      "peerDependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0"
-      },
-      "files": [
-        {
-          "name": "sbutton.tsx",
-          "content": "./components/sbutton/component.tsx"
-        }
-      ],
-      "tailwind": {
-        "config": {
-          "theme": {
-            "extend": {}
-          }
-        }
-      },
-      "cssVars": {},
-      "meta": {
-        "importName": "SButton",
-        "exportName": "default"
-      },
-      "category": "Elements",
-      "subcategory": "Button",
-      "description": "A flexible button component with multiple variants and sizes from STNG React library",
-      "tags": ["button", "interactive", "form", "stng-react"],
-      "version": "1.0.0",
-      "component": "./components/sbutton/component.tsx",
-      "schema": "./components/sbutton/schema.json",
-      "example": "./components/sbutton/example.tsx"
+      "name": "s-button",
+      "type": "registry:component",
+      "files": ["components/sbutton/component.tsx"]
     },
     {
-      "name": "scard",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["stng-react"],
-      "devDependencies": ["@types/react", "@types/react-dom"],
-      "peerDependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0"
-      },
-      "files": [
-        {
-          "name": "scard.tsx",
-          "content": "./components/scard/component.tsx"
-        }
-      ],
-      "tailwind": {
-        "config": {
-          "theme": {
-            "extend": {}
-          }
-        }
-      },
-      "cssVars": {},
-      "meta": {
-        "importName": "SCard",
-        "exportName": "default"
-      },
-      "category": "Layout",
-      "subcategory": "Container",
-      "description": "A versatile card component for displaying content in structured layouts from STNG React library",
-      "tags": ["card", "container", "layout", "stng-react"],
-      "version": "1.0.0",
-      "component": "./components/scard/component.tsx",
-      "schema": "./components/scard/schema.json",
-      "example": "./components/scard/example.tsx"
+      "name": "s-card",
+      "type": "registry:component",
+      "files": ["components/scard/component.tsx"]
     }
   ]
 }
