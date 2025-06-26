@@ -1,0 +1,45 @@
+{
+  "name": "stng-registry",
+  "version": "1.0.0",
+  "description": "Custom ShadCN Registry for STNG React Components - V0 Compatible",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssssaravanakumar/stng-registry.git"
+  },
+  "homepage": "https://github.com/ssssaravanakumar/stng-registry",
+  "bugs": {
+    "url": "https://github.com/ssssaravanakumar/stng-registry/issues"
+  },
+  "keywords": [
+    "components",
+    "ui",
+    "registry",
+    "shadcn",
+    "v0",
+    "react",
+    "stng-react",
+    "tailwind"
+  ],
+  "author": {
+    "name": "ssssaravanakumar",
+    "email": "career.saravanakumar@gmail.com"
+  },
+  "license": "MIT",
+  "files": [
+    "index.json",
+    "components/**/*"
+  ],
+  "peerDependencies": {
+    "stng-react": "^1.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
