@@ -1,0 +1,81 @@
+{
+  "name": "SRadio",
+  "type": "registry:ui",
+  "dependencies": ["stng-react"],
+  "files": ["components/sradio/component.tsx"],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {}
+      }
+    }
+  },
+  "cssVars": {},
+  "meta": {
+    "importName": "SRadio",
+    "exportName": "default"
+  },
+  "props": {
+    "value": {
+      "type": "string",
+      "required": true,
+      "description": "The value of the radio button"
+    },
+    "checked": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the radio button is checked"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the radio button is disabled"
+    },
+    "size": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "default": "medium",
+      "required": false,
+      "description": "Size of the radio button"
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "description": "Label text for the radio button"
+    },
+    "helperText": {
+      "type": "string",
+      "required": false,
+      "description": "Helper text displayed below the radio button"
+    },
+    "error": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the radio button is in error state"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the radio button is required"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "description": "Name attribute for grouping radio buttons"
+    },
+    "className": {
+      "type": "string",
+      "required": false,
+      "description": "Additional CSS classes"
+    },
+    "onChange": {
+      "type": "function",
+      "required": false,
+      "description": "Change handler function"
+    }
+  }
+}

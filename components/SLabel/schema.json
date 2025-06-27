@@ -1,0 +1,67 @@
+{
+  "name": "SLabel",
+  "type": "registry:ui",
+  "dependencies": ["stng-react"],
+  "files": ["components/slabel/component.tsx"],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {}
+      }
+    }
+  },
+  "cssVars": {},
+  "meta": {
+    "importName": "SLabel",
+    "exportName": "default"
+  },
+  "props": {
+    "children": {
+      "type": "ReactNode",
+      "required": true,
+      "description": "The label content"
+    },
+    "htmlFor": {
+      "type": "string",
+      "required": false,
+      "description": "The ID of the form element this label is for"
+    },
+    "size": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "default": "medium",
+      "required": false,
+      "description": "Size of the label text"
+    },
+    "weight": {
+      "type": "string",
+      "enum": ["normal", "medium", "semibold", "bold"],
+      "default": "medium",
+      "required": false,
+      "description": "Font weight of the label"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether to show required indicator (*)"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the label appears disabled"
+    },
+    "error": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the label is in error state"
+    },
+    "className": {
+      "type": "string",
+      "required": false,
+      "description": "Additional CSS classes"
+    }
+  }
+}

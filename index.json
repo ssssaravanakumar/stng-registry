@@ -9,14 +9,44 @@
   },
   "registry": [
     {
-      "name": "s-button",
+      "name": "SButton",
       "type": "registry:component",
-      "files": ["components/sbutton/component.tsx"]
+      "files": ["components/SButton/component.tsx"]
     },
     {
-      "name": "s-card",
+      "name": "SCard",
       "type": "registry:component",
-      "files": ["components/scard/component.tsx"]
+      "files": ["components/SCard/component.tsx"]
+    },
+    {
+      "name": "SCheckbox",
+      "type": "registry:component",
+      "files": ["components/SCheckbox/component.tsx"]
+    },
+    {
+      "name": "SInput",
+      "type": "registry:component",
+      "files": ["components/SInput/component.tsx"]
+    },
+    {
+      "name": "SLabel",
+      "type": "registry:component",
+      "files": ["components/SLabel/component.tsx"]
+    },
+    {
+      "name": "SRadio",
+      "type": "registry:component",
+      "files": ["components/SRadio/component.tsx"]
+    },
+    {
+      "name": "SSelect",
+      "type": "registry:component",
+      "files": ["components/SSelect/component.tsx"]
+    },
+    {
+      "name": "STextarea",
+      "type": "registry:component",
+      "files": ["components/STextarea/component.tsx"]
     }
   ]
 }

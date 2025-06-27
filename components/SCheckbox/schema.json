@@ -1,0 +1,84 @@
+{
+  "name": "SCheckbox",
+  "type": "registry:ui",
+  "dependencies": ["stng-react"],
+  "files": ["components/scheckbox/component.tsx"],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {}
+      }
+    }
+  },
+  "cssVars": {},
+  "meta": {
+    "importName": "SCheckbox",
+    "exportName": "default"
+  },
+  "props": {
+    "checked": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the checkbox is checked"
+    },
+    "indeterminate": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the checkbox is in indeterminate state"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the checkbox is disabled"
+    },
+    "size": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "default": "medium",
+      "required": false,
+      "description": "Size of the checkbox"
+    },
+    "variant": {
+      "type": "string",
+      "enum": ["default", "rounded"],
+      "default": "default",
+      "required": false,
+      "description": "Visual variant of the checkbox"
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "description": "Label text for the checkbox"
+    },
+    "helperText": {
+      "type": "string",
+      "required": false,
+      "description": "Helper text displayed below the checkbox"
+    },
+    "error": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the checkbox is in error state"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the checkbox is required"
+    },
+    "className": {
+      "type": "string",
+      "required": false,
+      "description": "Additional CSS classes"
+    },
+    "onChange": {
+      "type": "function",
+      "required": false,
+      "description": "Change handler function"
+    }
+  }
+}

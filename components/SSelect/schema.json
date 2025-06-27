@@ -1,0 +1,104 @@
+{
+  "name": "SSelect",
+  "type": "registry:ui",
+  "dependencies": ["stng-react"],
+  "files": ["components/sselect/component.tsx"],
+  "tailwind": {
+    "config": {
+      "theme": {
+        "extend": {}
+      }
+    }
+  },
+  "cssVars": {},
+  "meta": {
+    "importName": "SSelect",
+    "exportName": "default"
+  },
+  "props": {
+    "options": {
+      "type": "array",
+      "required": true,
+      "description": "Array of option objects with value, label, and optional disabled properties"
+    },
+    "value": {
+      "type": "string",
+      "required": false,
+      "description": "The selected value"
+    },
+    "placeholder": {
+      "type": "string",
+      "default": "Select an option...",
+      "required": false,
+      "description": "Placeholder text"
+    },
+    "size": {
+      "type": "string",
+      "enum": ["small", "medium", "large"],
+      "default": "medium",
+      "required": false,
+      "description": "Size of the select"
+    },
+    "variant": {
+      "type": "string",
+      "enum": ["default", "outlined", "filled"],
+      "default": "default",
+      "required": false,
+      "description": "Visual variant of the select"
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the select is disabled"
+    },
+    "error": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the select is in error state"
+    },
+    "helperText": {
+      "type": "string",
+      "required": false,
+      "description": "Helper text displayed below the select"
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "description": "Label text for the select"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether the select is required"
+    },
+    "multiple": {
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "Whether multiple options can be selected"
+    },
+    "className": {
+      "type": "string",
+      "required": false,
+      "description": "Additional CSS classes"
+    },
+    "onChange": {
+      "type": "function",
+      "required": false,
+      "description": "Change handler function"
+    },
+    "onFocus": {
+      "type": "function",
+      "required": false,
+      "description": "Focus handler function"
+    },
+    "onBlur": {
+      "type": "function",
+      "required": false,
+      "description": "Blur handler function"
+    }
+  }
+}
