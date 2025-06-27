@@ -3,6 +3,7 @@
 ## 🚀 **Phase 1: Repository Preparation & Hosting**
 
 ### Step 1.1: GitHub Repository Setup
+
 ```bash
 # Navigate to your registry directory
 cd /Users/saravanakumar/Documents/CB/POC/STNG_REGISTRY/Stng-registry
@@ -27,12 +28,15 @@ git push -u origin main
 ```
 
 ### Step 1.2: Verify GitHub Pages Access
+
 After pushing, your registry will be accessible at:
+
 ```
 https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/index.json
 ```
 
 **Verification Command:**
+
 ```bash
 curl -s https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/index.json | jq '.'
 ```
@@ -42,6 +46,7 @@ curl -s https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/in
 ## 🔧 **Phase 2: V0 Platform Configuration**
 
 ### Step 2.1: Access V0 Platform
+
 1. **Navigate to V0**: Go to [v0.dev](https://v0.dev)
 2. **Sign In**: Use your Vercel/GitHub account
 3. **Create New Project**: Click "New Project" or use existing project
@@ -49,12 +54,15 @@ curl -s https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/in
 ### Step 2.2: Configure Custom Registry
 
 #### Method A: Project Settings (Recommended)
+
 1. **Open Project Settings**:
+
    - Click on your project name
    - Navigate to "Settings" tab
    - Find "Component Registry" section
 
 2. **Add Custom Registry**:
+
    ```
    Registry Name: STNG Components
    Registry URL: https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/index.json
@@ -66,7 +74,9 @@ curl -s https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/in
    - Should show: SButton, SCard, SCheckbox, SInput, SLabel, SRadio, SSelect, STextarea
 
 #### Method B: Chat Configuration
+
 In V0 chat, you can also specify:
+
 ```
 Use components from registry: https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/index.json
 ```
@@ -78,15 +88,17 @@ Use components from registry: https://raw.githubusercontent.com/ssssaravanakumar
 ### Step 3.1: Component-Specific Prompts
 
 #### **Form Creation Prompts**
+
 ```
 "Create a user registration form using STNG components:
 - SInput for email (outlined variant, required)
-- SInput for password (outlined variant, required) 
+- SInput for password (outlined variant, required)
 - SCheckbox for terms agreement
 - SButton for submit (primary variant, large size)"
 ```
 
 #### **Dashboard UI Prompts**
+
 ```
 "Build a dashboard layout using:
 - SCard components with elevated variant for statistics
@@ -95,6 +107,7 @@ Use components from registry: https://raw.githubusercontent.com/ssssaravanakumar
 ```
 
 #### **Contact Form Prompts**
+
 ```
 "Design a contact form with validation:
 - SInput for name and email
@@ -106,6 +119,7 @@ Use components from registry: https://raw.githubusercontent.com/ssssaravanakumar
 ### Step 3.2: Advanced Prompt Techniques
 
 #### **Specify Component Details**
+
 ```
 "Create a product filter sidebar using:
 - SSelect with country options (multiple selection)
@@ -115,6 +129,7 @@ Use components from registry: https://raw.githubusercontent.com/ssssaravanakumar
 ```
 
 #### **Layout and Styling Prompts**
+
 ```
 "Build a responsive form layout:
 - 2-column grid on desktop, single column on mobile
@@ -132,15 +147,16 @@ Use components from registry: https://raw.githubusercontent.com/ssssaravanakumar
 When V0 generates code, expect patterns like:
 
 #### **Form Components**
+
 ```jsx
 import { SInput, SButton, SCheckbox, STextarea } from "stng-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    newsletter: false
+    name: "",
+    email: "",
+    message: "",
+    newsletter: false,
   });
 
   return (
@@ -151,9 +167,9 @@ export default function ContactForm() {
         variant="outlined"
         required
         value={formData.name}
-        onChange={(e) => setFormData({...formData, name: e.target.value})}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
       />
-      
+
       <SInput
         type="email"
         label="Email"
@@ -161,9 +177,9 @@ export default function ContactForm() {
         variant="outlined"
         required
         value={formData.email}
-        onChange={(e) => setFormData({...formData, email: e.target.value})}
+        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
       />
-      
+
       <STextarea
         label="Message"
         placeholder="Tell us about your inquiry..."
@@ -171,21 +187,18 @@ export default function ContactForm() {
         variant="outlined"
         required
         value={formData.message}
-        onChange={(e) => setFormData({...formData, message: e.target.value})}
+        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
       />
-      
+
       <SCheckbox
         label="Subscribe to newsletter"
         checked={formData.newsletter}
-        onChange={(e) => setFormData({...formData, newsletter: e.target.checked})}
+        onChange={(e) =>
+          setFormData({ ...formData, newsletter: e.target.checked })
+        }
       />
-      
-      <SButton
-        type="submit"
-        variant="primary"
-        size="large"
-        className="w-full"
-      >
+
+      <SButton type="submit" variant="primary" size="large" className="w-full">
         Send Message
       </SButton>
     </form>
@@ -194,6 +207,7 @@ export default function ContactForm() {
 ```
 
 #### **Dashboard Layouts**
+
 ```jsx
 import { SCard, SButton, SSelect } from "stng-react";
 
@@ -201,7 +215,7 @@ export default function Dashboard() {
   const filterOptions = [
     { value: "all", label: "All Items" },
     { value: "active", label: "Active" },
-    { value: "pending", label: "Pending" }
+    { value: "pending", label: "Pending" },
   ];
 
   return (
@@ -215,9 +229,7 @@ export default function Dashboard() {
             placeholder="Filter by status"
             variant="outlined"
           />
-          <SButton variant="primary">
-            Add New
-          </SButton>
+          <SButton variant="primary">Add New</SButton>
         </div>
       </div>
 
@@ -227,12 +239,12 @@ export default function Dashboard() {
           <h3 className="text-lg font-semibold">Total Users</h3>
           <p className="text-3xl font-bold text-blue-600">1,234</p>
         </SCard>
-        
+
         <SCard variant="elevated" padding="medium">
           <h3 className="text-lg font-semibold">Revenue</h3>
           <p className="text-3xl font-bold text-green-600">$45,678</p>
         </SCard>
-        
+
         <SCard variant="elevated" padding="medium">
           <h3 className="text-lg font-semibold">Orders</h3>
           <p className="text-3xl font-bold text-purple-600">567</p>
@@ -248,6 +260,7 @@ export default function Dashboard() {
 ## 🔍 **Phase 5: Testing & Validation**
 
 ### Step 5.1: Registry Validation
+
 ```bash
 # Test registry accessibility
 curl -I https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/index.json
@@ -261,6 +274,7 @@ curl -s https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/in
 ```
 
 ### Step 5.2: Component Schema Validation
+
 ```bash
 # Test individual component schemas
 curl -s https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/components/SButton/schema.json | jq '.props'
@@ -275,15 +289,17 @@ done
 ### Step 5.3: V0 Integration Testing
 
 #### **Test 1: Simple Component Generation**
+
 Prompt: `"Create a simple button using SButton with primary variant"`
 
 Expected Result:
+
 ```jsx
 import { SButton } from "stng-react";
 
 export default function SimpleButton() {
   return (
-    <SButton variant="primary" onClick={() => alert('Clicked!')}>
+    <SButton variant="primary" onClick={() => alert("Clicked!")}>
       Click Me
     </SButton>
   );
@@ -291,11 +307,13 @@ export default function SimpleButton() {
 ```
 
 #### **Test 2: Complex Form Generation**
+
 Prompt: `"Create a complete user profile form with all STNG form components"`
 
 Expected Result: Multi-component form with proper imports and usage
 
 #### **Test 3: Error Handling**
+
 Prompt: `"Create a form with validation using error states from STNG components"`
 
 Expected Result: Components with error props properly applied
@@ -305,7 +323,9 @@ Expected Result: Components with error props properly applied
 ## 📊 **Phase 6: Monitoring & Optimization**
 
 ### Step 6.1: Usage Analytics
+
 Monitor V0 usage through:
+
 - **GitHub Insights**: Repository access patterns
 - **V0 Project Metrics**: Component usage frequency
 - **Generated Code Quality**: Review AI-generated implementations
@@ -313,24 +333,28 @@ Monitor V0 usage through:
 ### Step 6.2: Registry Maintenance
 
 #### **Adding New Components**
+
 When adding new components to stng-react:
 
 1. **Update Registry Structure**:
+
 ```bash
 mkdir -p components/SNewComponent
 touch components/SNewComponent/{component.tsx,schema.json,example.tsx}
 ```
 
 2. **Update index.json**:
+
 ```json
 {
   "name": "SNewComponent",
-  "type": "registry:component", 
+  "type": "registry:component",
   "files": ["components/SNewComponent/component.tsx"]
 }
 ```
 
 3. **Push Updates**:
+
 ```bash
 git add .
 git commit -m "feat: Add SNewComponent to registry"
@@ -338,7 +362,9 @@ git push origin main
 ```
 
 #### **Schema Updates**
+
 When component props change:
+
 1. Update corresponding `schema.json`
 2. Update `example.tsx` with new usage patterns
 3. Test with V0 to ensure proper generation
@@ -350,33 +376,43 @@ When component props change:
 ### Common Issues & Solutions
 
 #### **Issue 1: V0 Can't Access Registry**
+
 ```
 Error: "Failed to load custom registry"
 ```
-**Solution**: 
+
+**Solution**:
+
 - Verify GitHub repository is public
 - Check raw URL accessibility
 - Ensure index.json is valid JSON
 
 #### **Issue 2: Components Not Generating Correctly**
+
 ```
 Error: "Unknown component SButton"
 ```
+
 **Solution**:
+
 - Verify component is listed in index.json
 - Check schema.json has correct metadata
 - Ensure stng-react dependency is properly declared
 
 #### **Issue 3: Props Not Working**
+
 ```
 Error: "Property 'variant' does not exist"
 ```
+
 **Solution**:
+
 - Review schema.json prop definitions
 - Ensure enum values match component implementation
 - Update example.tsx with correct usage
 
 ### Debug Commands
+
 ```bash
 # Validate registry JSON
 jq empty index.json && echo "Valid JSON" || echo "Invalid JSON"
@@ -407,6 +443,7 @@ curl -f https://raw.githubusercontent.com/ssssaravanakumar/stng-registry/main/in
 7. **Functional Output**: Generated components work without modification
 
 ### Performance Indicators:
+
 - **Response Time**: Registry loads within 2-3 seconds
 - **Accuracy Rate**: 95%+ of generated code compiles successfully
 - **Component Coverage**: All 8 components generate correctly
